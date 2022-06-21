@@ -32,9 +32,20 @@ final class EventViewModel: ObservableObject {
         if searchText == "" {
             events = allEvents
         } else {
-//            events = allEvents.filter {
-//                ($0.city ?? "").lowercased().contains(searchText.lowercased())
-//            }
+            events = allEvents.compactMap { event in
+                let result = (event.children ?? []).compactMap { child -> EventContainer in
+                    var filteredEvents = [Event]()
+                    filteredEvents = (child.events ?? []).filter {
+                        ($0.city ?? "").lowercased().contains(searchText.lowercased())
+                    }
+                    
+                    return EventContainer(id: child.id, name: child.name, events: filteredEvents, children: [])
+                    
+                }.filter { !($0.events ?? []).isEmpty }
+
+                return EventContainer(id: event.id, name: event.name, events: [], children: result)
+                
+            }.filter { !($0.children ?? []).isEmpty }
         }
     }
     
