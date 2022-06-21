@@ -12,11 +12,18 @@ struct EventListView: View {
     @ObservedObject var viewModel: EventViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .onAppear {
-                viewModel.loadEvents()
+        List {
+            ForEach(viewModel.events, id: \.self) { event in
+                EventView(event: event)
             }
-            .navigationTitle("Events")
+        }
+        .listStyle(.grouped)
+        .searchable(text: $viewModel.searchText)
+        .padding()
+        .onAppear {
+            viewModel.loadEvents()
+        }
+        .navigationTitle("Events")
     }
 }
 
