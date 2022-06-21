@@ -11,7 +11,9 @@ import SwiftUI
 struct EventListApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                EventListView(viewModel: EventViewModel())
+            }
         }
     }
 }

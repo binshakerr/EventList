@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		DC733AC72861002100EF2A34 /* EventListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC733AC62861002100EF2A34 /* EventListApp.swift */; };
-		DC733AC92861002100EF2A34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC733AC82861002100EF2A34 /* ContentView.swift */; };
 		DC733ACB2861002300EF2A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC733ACA2861002300EF2A34 /* Assets.xcassets */; };
 		DC733ACE2861002300EF2A34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC733ACD2861002300EF2A34 /* Preview Assets.xcassets */; };
 		DC733AD62861008B00EF2A34 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = DC733AD42861005A00EF2A34 /* Events.json */; };
 		DCA6B5C728624F2B001C04B3 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5C628624F2B001C04B3 /* JsonReader.swift */; };
 		DCA6B5CA28625087001C04B3 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5C928625087001C04B3 /* Event.swift */; };
 		DCA6B5CC2862509F001C04B3 /* EventContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5CB2862509F001C04B3 /* EventContainer.swift */; };
+		DCA6B5CE28625105001C04B3 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5CD28625105001C04B3 /* EventViewModel.swift */; };
+		DCA6B5D028625195001C04B3 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5CF28625195001C04B3 /* EventListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC733AC32861002100EF2A34 /* EventList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC733AC62861002100EF2A34 /* EventListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListApp.swift; sourceTree = "<group>"; };
-		DC733AC82861002100EF2A34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DC733ACA2861002300EF2A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC733ACD2861002300EF2A34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC733AD42861005A00EF2A34 /* Events.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
 		DCA6B5C628624F2B001C04B3 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		DCA6B5C928625087001C04B3 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		DCA6B5CB2862509F001C04B3 /* EventContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventContainer.swift; sourceTree = "<group>"; };
+		DCA6B5CD28625105001C04B3 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		DCA6B5CF28625195001C04B3 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,6 @@
 				DCA6B5C528624F12001C04B3 /* ViewModel */,
 				DCA6B5C428624F0C001C04B3 /* View */,
 				DC733AC62861002100EF2A34 /* EventListApp.swift */,
-				DC733AC82861002100EF2A34 /* ContentView.swift */,
 				DC733ACA2861002300EF2A34 /* Assets.xcassets */,
 				DC733ACC2861002300EF2A34 /* Preview Content */,
 				DC733AD42861005A00EF2A34 /* Events.json */,
@@ -83,6 +84,7 @@
 		DCA6B5C428624F0C001C04B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6B5CF28625195001C04B3 /* EventListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +92,7 @@
 		DCA6B5C528624F12001C04B3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6B5CD28625105001C04B3 /* EventViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,7 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCA6B5CA28625087001C04B3 /* Event.swift in Sources */,
-				DC733AC92861002100EF2A34 /* ContentView.swift in Sources */,
+				DCA6B5D028625195001C04B3 /* EventListView.swift in Sources */,
+				DCA6B5CE28625105001C04B3 /* EventViewModel.swift in Sources */,
 				DCA6B5C728624F2B001C04B3 /* JsonReader.swift in Sources */,
 				DC733AC72861002100EF2A34 /* EventListApp.swift in Sources */,
 				DCA6B5CC2862509F001C04B3 /* EventContainer.swift in Sources */,
