@@ -12,6 +12,7 @@
 		DC733ACB2861002300EF2A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC733ACA2861002300EF2A34 /* Assets.xcassets */; };
 		DC733ACE2861002300EF2A34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC733ACD2861002300EF2A34 /* Preview Assets.xcassets */; };
 		DC733AD62861008B00EF2A34 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = DC733AD42861005A00EF2A34 /* Events.json */; };
+		DCA6B5C728624F2B001C04B3 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA6B5C628624F2B001C04B3 /* JsonReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		DC733ACA2861002300EF2A34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC733ACD2861002300EF2A34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC733AD42861005A00EF2A34 /* Events.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
+		DCA6B5C628624F2B001C04B3 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +55,14 @@
 		DC733AC52861002100EF2A34 /* EventList */ = {
 			isa = PBXGroup;
 			children = (
+				DCA6B5C528624F12001C04B3 /* ViewModel */,
+				DCA6B5C428624F0C001C04B3 /* View */,
 				DC733AC62861002100EF2A34 /* EventListApp.swift */,
 				DC733AC82861002100EF2A34 /* ContentView.swift */,
 				DC733ACA2861002300EF2A34 /* Assets.xcassets */,
 				DC733ACC2861002300EF2A34 /* Preview Content */,
 				DC733AD42861005A00EF2A34 /* Events.json */,
+				DCA6B5C628624F2B001C04B3 /* JsonReader.swift */,
 			);
 			path = EventList;
 			sourceTree = "<group>";
@@ -68,6 +73,20 @@
 				DC733ACD2861002300EF2A34 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DCA6B5C428624F0C001C04B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCA6B5C528624F12001C04B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC733AC92861002100EF2A34 /* ContentView.swift in Sources */,
+				DCA6B5C728624F2B001C04B3 /* JsonReader.swift in Sources */,
 				DC733AC72861002100EF2A34 /* EventListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
