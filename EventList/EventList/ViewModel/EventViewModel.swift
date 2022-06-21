@@ -10,8 +10,8 @@ import Combine
 
 final class EventViewModel: ObservableObject {
     
-    private var allEvents: [Event] = []
-    @Published var events: [Event] = []
+    private var allEvents: [EventContainer] = []
+    @Published var events: [EventContainer] = []
     @Published var searchText = "" {
         didSet {
             filterResults()
@@ -21,7 +21,7 @@ final class EventViewModel: ObservableObject {
     func loadEvents() {
         do {
             let container = try JsonReader.shared.load(fileName: "Events", type: EventContainer.self)
-            allEvents = container.events ?? []
+            allEvents = container.children ?? []
             events = allEvents
         } catch {
             print(error)
@@ -32,9 +32,9 @@ final class EventViewModel: ObservableObject {
         if searchText == "" {
             events = allEvents
         } else {
-            events = allEvents.filter {
-                ($0.city ?? "").lowercased().contains(searchText.lowercased())
-            }
+//            events = allEvents.filter {
+//                ($0.city ?? "").lowercased().contains(searchText.lowercased())
+//            }
         }
     }
     

@@ -13,17 +13,22 @@ struct EventListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.events, id: \.self) { event in
-                EventView(event: event)
+            ForEach(viewModel.events, id: \.self) { container in
+                Section(container.name ?? "") {
+                    ForEach(container.children ?? [], id: \.self) { innerContainer in
+                        ForEach(innerContainer.events ?? [], id: \.self) { event in
+                            EventView(event: event)
+                        }
+                    }
+                }
             }
         }
         .listStyle(.grouped)
         .searchable(text: $viewModel.searchText)
-        .padding()
         .onAppear {
             viewModel.loadEvents()
         }
-        .navigationTitle("Events")
+        .navigationTitle("Concerts")
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EventContainer: Codable {
+struct EventContainer: Codable, Hashable, Identifiable {
     let id: Int?
     let name: String?
     let events: [Event]?
